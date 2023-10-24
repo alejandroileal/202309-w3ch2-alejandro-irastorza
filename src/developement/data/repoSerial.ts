@@ -1,19 +1,20 @@
 import { Asesor } from '../Asesor';
 import { Luchador } from '../Luchador';
 import { Squire } from '../Squire';
-import { Character, CharacterStructure } from '../personaje';
+import { type Character, type CharacterStructure } from '../personaje';
 import { King } from '../rey';
 
 export const repoSerial = (): CharacterStructure => {
-  //==> Lo que devuelve mi repo serán los elementos serializados de CharacterStructure. Me devuelve un flujo de datos que se usan en el front (Los datos se envías sin métodos ==> Datos puros)
+  // ==> Lo que devuelve mi repo serán los elementos serializados de CharacterStructure. Me devuelve un flujo de datos que se usan en el front (Los datos se envías sin métodos ==> Datos puros)
 
   const characters: Character[] = [
-    new King('Joffrey', 'Baratheon', 34, ':)', 19),
-    new Luchador('Daenerys', 'Apellido', 26, ':)', 'dragones', 9),
+    new King('Joffrey', 'Baratheon', 34, '👑', 19),
+    new Luchador('Daenerys', 'Targaryen', 26, '🗡', 'dragones', 9),
+    new Luchador('Jaime', 'Lannister', 33, '🗡', 'Espada', 6),
   ];
 
-  characters.push(new Asesor('', '', 34, 9, ':)', characters[1]));
-  characters.push(new Squire('', '', 25, ':)', 8));
+  characters.push(new Asesor('', '', 34, 9, '🎓', characters[1]));
+  characters.push(new Squire('Bronn', '', 25, '🛡', 8));
 
   // Serialización de datos(Hacer que su clase no se mencione en consola)
 

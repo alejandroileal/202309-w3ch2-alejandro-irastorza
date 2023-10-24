@@ -7,4 +7,11 @@ function main() {
   console.log('Loaded Main :)');
 }
 
+const domCardElement = document.querySelector('.characters-list');
+if (domCardElement === null) {
+  return;
+}
+
+card(King);
+
 main();
